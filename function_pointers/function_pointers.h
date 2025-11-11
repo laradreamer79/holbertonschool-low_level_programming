@@ -4,13 +4,10 @@
 #include <stddef.h>
 #include <stdlib.h>
 
-/**
- * struct function_pointers - header file for function pointer tasks
- * @name: pointer to the name string
- * @f: pointer to function that takes a char pointer argument
- *
- * Description: This header contains all prototypes used
- * in the function pointer project.
+/*
+ * File: function_pointers.h
+ * Desc: Header file that contains prototypes for all functions
+ *       used in the function pointers project.
  */
 
 void print_name(char *name, void (*f)(char *));
