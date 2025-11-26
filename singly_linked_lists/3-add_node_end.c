@@ -1,6 +1,20 @@
 #include "lists.h"
 
 /**
+ * _strlen - returns the length of a string
+ * @s: the string to measure
+ * Return: length of s
+ */
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+
+/**
  * add_node_end - adds a new node at the end of a list_t list
  * @head: pointer to pointer to head of the list
  * @str: string to duplicate into the new node
@@ -22,7 +36,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 
-	new->len = strlen(str);
+	new->len = _strlen(str);
 	new->next = NULL;
 
 	if (*head == NULL)
@@ -32,7 +46,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 
 	temp = *head;
-	while (temp->next)
+	while (temp->next != NULL)
 		temp = temp->next;
 
 	temp->next = new;
