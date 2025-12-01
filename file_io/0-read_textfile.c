@@ -5,7 +5,7 @@
  * @filename: name of the file to read
  * @letters: number of letters to read and print
  *
- * Return: actual number of letters read and printed, or 0 on failure
+ * Return: number of letters printed, or 0 on failure
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -35,6 +35,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	w = write(STDOUT_FILENO, buffer, r);
+
 	free(buffer);
 	close(fd);
 
