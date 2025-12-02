@@ -42,5 +42,16 @@ int append_text_to_file(const char *filename, char *text_content);
  */
 int _copy(const char *src, const char *dest);
 
+void print_error(char *msg);
+void check_elf(unsigned char *e_ident);
+void print_magic(unsigned char *e_ident);
+void print_class(unsigned char *e_ident);
+void print_data(unsigned char *e_ident);
+void print_version(unsigned char *e_ident);
+void print_osabi(unsigned char *e_ident);
+void print_abiversion(unsigned char *e_ident);
+void print_type(unsigned char *buffer);
+void print_entry(unsigned char *entry, int class, int data);
+
 #endif /* MAIN_H */
 
